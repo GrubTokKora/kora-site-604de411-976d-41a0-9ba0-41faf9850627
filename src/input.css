@@ -1,3 +1,18 @@
 @import "tailwindcss";
+
 @source "../**/*.html";
-@source "../assets/**/*.js";
+@source "../**/*.js";
+
+@theme {
+  --color-shiki-navy: #2b4086;
+  --color-shiki-navy-light: #3a5599;
+  --color-shiki-navy-dark: #1f3065;
+  --color-shiki-gold: #b57b0f;
+  --color-shiki-gold-light: #d4a030;
+  --color-shiki-cream: #f5f0e8;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: Inter, sans-serif;
+}
+
+@import "../styles.css";
