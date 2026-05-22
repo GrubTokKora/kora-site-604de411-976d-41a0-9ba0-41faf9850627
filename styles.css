@@ -65,20 +65,25 @@
 
 @media (max-width: 991px) {
   .hero-section {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 4rem 0 2.5rem;
+  }
+
+  .hero-section::before {
+    display: none;
   }
 
   .hero-layout {
     margin: 0;
     max-width: none;
     width: 100%;
-    gap: 2rem;
+    gap: 1.75rem;
+    align-items: stretch;
   }
 
   .hero-visual {
     order: 1;
     width: 100%;
+    max-width: none;
     margin: 0;
   }
 
@@ -89,10 +94,9 @@
   }
 
   .hero-image-card {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
+    border: none;
     box-shadow: none;
+    overflow: hidden;
   }
 }
 
@@ -105,6 +109,12 @@
   .hero-content,
   .hero-visual {
     order: unset;
+  }
+
+  .hero-image-card {
+    border-radius: 1.5rem;
+    box-shadow: 0 24px 60px rgba(43, 64, 134, 0.14);
+    border: 1px solid rgba(43, 64, 134, 0.08);
   }
 }
 
@@ -274,17 +284,18 @@
 
 .hero-image-card {
   position: relative;
-  border-radius: 1.5rem;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 24px 60px rgba(43, 64, 134, 0.14);
-  border: 1px solid rgba(43, 64, 134, 0.08);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .hero-slideshow {
   position: relative;
   aspect-ratio: 16 / 9;
   background: #e8ecf5;
+  border-radius: 0;
 }
 
 .hero-slide-img {
@@ -294,6 +305,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
