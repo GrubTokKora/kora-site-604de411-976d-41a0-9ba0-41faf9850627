@@ -61,7 +61,7 @@ function renderFooter() {
       </div>
       <div class="max-w-[1200px] mx-auto mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="font-body text-xs text-white/40">&copy; 2025 Shiki Hibachi &amp; Sushi. All rights reserved.</p>
-        <p class="font-body text-xs text-white/40">Powered by ChowNow</p>
+        <p class="font-body text-xs text-white/40">Powered by <a href="https://askkora.ai/" target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors duration-300">Kora</a></p>
       </div>
     </div>
   `;
