@@ -63,10 +63,25 @@
   align-items: center;
 }
 
+@media (max-width: 991px) {
+  .hero-visual {
+    order: 1;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+}
+
 @media (min-width: 992px) {
   .hero-layout {
     grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr);
     gap: 2.5rem;
+  }
+
+  .hero-content,
+  .hero-visual {
+    order: unset;
   }
 }
 
