@@ -141,30 +141,32 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal-section').forEach(el => revealObserver.observe(el));
 
 // ===== HERO SLIDESHOW =====
-const slides = document.querySelectorAll('.hero-slide');
-const indicators = document.querySelectorAll('.slide-indicator');
+const heroSlides = document.querySelectorAll('.hero-slide-img');
+const heroIndicators = document.querySelectorAll('#hero-indicators .slide-indicator');
 let currentSlide = 0;
 let slideInterval;
 
-function goToSlide(index) {
-  slides[currentSlide].classList.remove('active');
-  indicators[currentSlide].classList.remove('active');
-  currentSlide = (index + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  indicators[currentSlide].classList.add('active');
-}
+if (heroSlides.length > 0) {
+  function goToSlide(index) {
+    heroSlides[currentSlide].classList.remove('active');
+    if (heroIndicators[currentSlide]) heroIndicators[currentSlide].classList.remove('active');
+    currentSlide = (index + heroSlides.length) % heroSlides.length;
+    heroSlides[currentSlide].classList.add('active');
+    if (heroIndicators[currentSlide]) heroIndicators[currentSlide].classList.add('active');
+  }
 
-function nextSlide() { goToSlide(currentSlide + 1); }
+  function nextSlide() { goToSlide(currentSlide + 1); }
 
-indicators.forEach((ind, i) => {
-  ind.addEventListener('click', () => {
-    goToSlide(i);
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000);
+  heroIndicators.forEach((ind, i) => {
+    ind.addEventListener('click', () => {
+      goToSlide(i);
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    });
   });
-});
 
-slideInterval = setInterval(nextSlide, 5000);
+  slideInterval = setInterval(nextSlide, 5000);
+}
 
 // ===== GALLERY LIGHTBOX =====
 const galleryImages = [

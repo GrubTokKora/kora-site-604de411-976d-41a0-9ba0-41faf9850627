@@ -57,6 +57,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Styles (prebuilt Tailwind + site CSS) -->
 <link href="./assets/styles.css" rel="stylesheet"/>
+<link href="./styles.css" rel="stylesheet"/>
 </head>
 <body class="bg-shiki-navy text-white font-body overflow-x-hidden">
 <!-- HEADER (rendered by JS) -->
@@ -76,39 +77,44 @@
 </nav>
 </div>
 <!-- ==================== HERO ==================== -->
-<section class="hero-section relative w-full min-h-[100dvh] overflow-hidden" id="top">
-<!-- Background Slideshow -->
-<div class="hero-slideshow" id="hero-slideshow">
-<div class="hero-slide active" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/1.jpg?1779472123735');"></div>
-<div class="hero-slide" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/2.jpg?1779472123735');"></div>
-<div class="hero-slide" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/3.jpg?1779472123735');"></div>
-<div class="hero-slide" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/4.jpg?1779472123735');"></div>
-<div class="hero-slide" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/5.jpg?1779472123735');"></div>
-<div class="hero-slide" style="background-image: url('http://www.shikistamford.com/assets/images/demo/slides/6.jpg?1779472123735');"></div>
-</div>
-<!-- Bottom gradient -->
-<div class="absolute bottom-0 left-0 right-0 h-[200px] z-[5] hero-bottom-gradient"></div>
-<div class="hero-layout">
-<div class="hero-content">
-<p class="font-body font-semibold tracking-[0.15em] uppercase text-shiki-gold-light mb-6">Stamford, CT · 20+ Years</p>
-<h1 class="hero-flame-text">
-<span class="hero-line">Shiki</span>
-<span class="hero-line">Hibachi &amp; Sushi</span>
-</h1>
-<p class="font-display italic font-light text-white/80 mt-4 hero-tagline">Experience the Art of Teppanyaki</p>
-<a class="hero-order-btn inline-block mt-10 px-10 py-4 rounded-full text-white font-body text-sm font-medium uppercase tracking-[0.06em] transition-all duration-300 hover:scale-105" href="https://direct.chownow.com/order/24204/locations/35586" rel="noopener noreferrer" target="_blank">
-          Order Online
-        </a>
-</div>
-<div class="hero-indicators" id="hero-indicators">
-<div class="slide-indicator active" data-slide="0"></div>
-<div class="slide-indicator" data-slide="1"></div>
-<div class="slide-indicator" data-slide="2"></div>
-<div class="slide-indicator" data-slide="3"></div>
-<div class="slide-indicator" data-slide="4"></div>
-<div class="slide-indicator" data-slide="5"></div>
-</div>
-</div>
+<section class="hero-section" id="top">
+  <div class="hero-layout">
+    <div class="hero-content">
+      <span class="hero-badge">Stamford, CT · 20+ Years</span>
+      <h1 class="hero-heading">
+        <span class="hero-heading-accent">Shiki</span>
+        <span class="hero-heading-line">Hibachi &amp; Sushi</span>
+      </h1>
+      <p class="hero-description font-body mt-6 max-w-xl leading-relaxed">
+        For over 20 years, Shiki has been Stamford's destination for live teppanyaki, fresh sushi, and unforgettable Japanese dining.
+      </p>
+      <div class="hero-actions mt-8">
+        <a class="hero-order-btn" href="https://direct.chownow.com/order/24204/locations/35586" rel="noopener noreferrer" target="_blank">Order Online</a>
+        <a class="hero-secondary-btn" href="#menu">View Menu</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-image-card">
+        <div class="hero-slideshow" id="hero-slideshow">
+          <img class="hero-slide-img active" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462271_mz7mjw.jpg" alt="Shiki restaurant interior and bar">
+          <img class="hero-slide-img" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462277_k9zw9a.jpg" alt="Shiki dining room">
+          <img class="hero-slide-img" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462286_q85gk0.jpg" alt="Shiki hibachi tables">
+          <img class="hero-slide-img" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462295_crt9tg.jpg" alt="Shiki sushi bar">
+          <img class="hero-slide-img" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462301_51xg7d.jpg" alt="Shiki restaurant atmosphere">
+          <img class="hero-slide-img" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/604de411-976d-41a0-9ba0-41faf9850627/de8c94d8-887e-4625-825f-ec262dbc28df/1779462308_2b3ftn.jpg" alt="Shiki lounge seating">
+        </div>
+        <div class="hero-indicators" id="hero-indicators">
+          <button type="button" class="slide-indicator active" data-slide="0" aria-label="Show image 1"></button>
+          <button type="button" class="slide-indicator" data-slide="1" aria-label="Show image 2"></button>
+          <button type="button" class="slide-indicator" data-slide="2" aria-label="Show image 3"></button>
+          <button type="button" class="slide-indicator" data-slide="3" aria-label="Show image 4"></button>
+          <button type="button" class="slide-indicator" data-slide="4" aria-label="Show image 5"></button>
+          <button type="button" class="slide-indicator" data-slide="5" aria-label="Show image 6"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- ==================== ABOUT ==================== -->
 <section class="reveal-section" id="about" style="background: #2B4086; padding: 120px clamp(1.5rem, 5vw, 4rem);">
